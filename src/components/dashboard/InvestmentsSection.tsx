@@ -35,7 +35,7 @@ const InvestmentsSection = () => {
       type: "Stock",
       name: "Apple Inc.",
       symbol: "AAPL",
-      price: "$189.50",
+      price: "₹189.50",
       change: "+2.4%",
       risk: "Medium",
       description: "Technology leader with strong fundamentals"
@@ -44,7 +44,7 @@ const InvestmentsSection = () => {
       type: "ETF",
       name: "Student Bond Fund",
       symbol: "BND",
-      price: "$78.20",
+      price: "₹78.20",
       change: "+0.8%",
       risk: "Low",
       description: "Conservative option for steady growth"
@@ -53,7 +53,7 @@ const InvestmentsSection = () => {
       type: "Crypto",
       name: "Bitcoin",
       symbol: "BTC",
-      price: "$42,150",
+      price: "₹42,150",
       change: "+5.2%",
       risk: "High",
       description: "Digital currency with high volatility"
@@ -93,23 +93,23 @@ const InvestmentsSection = () => {
           <div className="text-center">
             <PieChart className="h-8 w-8 mx-auto mb-2 text-primary" />
             <p className="text-sm text-muted-foreground">Total Value</p>
-            <p className="text-2xl font-bold text-primary">${totalValue.toFixed(2)}</p>
+            <p className="text-2xl font-bold text-primary">₹{totalValue.toFixed(2)}</p>
           </div>
         </Card>
         
         <Card className="p-6 bg-gradient-to-br from-card to-muted/5">
           <div className="text-center">
             <p className="text-sm text-muted-foreground">Invested</p>
-            <p className="text-2xl font-bold">${totalInvested.toFixed(2)}</p>
+            <p className="text-2xl font-bold">₹{totalInvested.toFixed(2)}</p>
           </div>
         </Card>
         
         <Card className="p-6 bg-gradient-to-br from-card to-success/5">
           <div className="text-center">
             <p className="text-sm text-muted-foreground">Gain/Loss</p>
-            <p className={`text-2xl font-bold ${totalGainLoss >= 0 ? 'text-success' : 'text-destructive'}`}>
-              {totalGainLoss >= 0 ? '+' : ''}${totalGainLoss.toFixed(2)}
-            </p>
+             <p className={`text-2xl font-bold ${totalGainLoss >= 0 ? 'text-success' : 'text-destructive'}`}>
+               {totalGainLoss >= 0 ? '+' : ''}₹{totalGainLoss.toFixed(2)}
+             </p>
           </div>
         </Card>
         
@@ -139,18 +139,18 @@ const InvestmentsSection = () => {
                       <h4 className="font-semibold">{holding.name}</h4>
                       <span className="text-sm font-mono text-muted-foreground">{holding.symbol}</span>
                     </div>
-                    <div className="flex items-center space-x-4 text-sm text-muted-foreground">
-                      <span>Invested: ${holding.invested.toFixed(2)}</span>
-                      <span>•</span>
-                      <span>Current: ${holding.value.toFixed(2)}</span>
-                    </div>
+                     <div className="flex items-center space-x-4 text-sm text-muted-foreground">
+                       <span>Invested: ₹{holding.invested.toFixed(2)}</span>
+                       <span>•</span>
+                       <span>Current: ₹{holding.value.toFixed(2)}</span>
+                     </div>
                   </div>
                   <div className="text-right">
                     <div className={`flex items-center ${gainLoss >= 0 ? 'text-success' : 'text-destructive'}`}>
                       {gainLoss >= 0 ? <TrendingUp className="h-4 w-4 mr-1" /> : <TrendingDown className="h-4 w-4 mr-1" />}
-                      <span className="font-semibold">
-                        {gainLoss >= 0 ? '+' : ''}${gainLoss.toFixed(2)}
-                      </span>
+                       <span className="font-semibold">
+                         {gainLoss >= 0 ? '+' : ''}₹{gainLoss.toFixed(2)}
+                       </span>
                     </div>
                     <p className={`text-sm ${gainLoss >= 0 ? 'text-success' : 'text-destructive'}`}>
                       ({percentage >= 0 ? '+' : ''}{percentage.toFixed(1)}%)

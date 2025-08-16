@@ -14,9 +14,9 @@ const SplitBillsSection = () => {
       total: 45.60,
       paidBy: "Alex",
       participants: [
-        { name: "Alex", amount: 15.20, paid: true },
-        { name: "Mike", amount: 15.20, paid: false },
-        { name: "Sarah", amount: 15.20, paid: true }
+        { name: "Abinesh", amount: 15.20, paid: true },
+        { name: "Abhijeet", amount: 15.20, paid: false },
+        { name: "Anuva", amount: 15.20, paid: true }
       ],
       date: "Dec 10, 2024",
       status: "partial"
@@ -25,11 +25,11 @@ const SplitBillsSection = () => {
       id: 2,
       title: "Uber to Concert",
       total: 28.50,
-      paidBy: "Emma",
+      paidBy: "Akanksha",
       participants: [
-        { name: "Emma", amount: 9.50, paid: true },
-        { name: "Alex", amount: 9.50, paid: true },
-        { name: "Jake", amount: 9.50, paid: false }
+        { name: "Akanksha", amount: 9.50, paid: true },
+        { name: "Abinesh", amount: 9.50, paid: true },
+        { name: "Abhijeet", amount: 9.50, paid: false }
       ],
       date: "Dec 8, 2024",
       status: "partial"
@@ -38,11 +38,11 @@ const SplitBillsSection = () => {
       id: 3,
       title: "Grocery Shopping",
       total: 67.80,
-      paidBy: "Lisa",
+      paidBy: "Anuva",
       participants: [
-        { name: "Lisa", amount: 22.60, paid: true },
-        { name: "Tom", amount: 22.60, paid: true },
-        { name: "Alex", amount: 22.60, paid: true }
+        { name: "Anuva", amount: 22.60, paid: true },
+        { name: "Abhijeet", amount: 22.60, paid: true },
+        { name: "Abinesh", amount: 22.60, paid: true }
       ],
       date: "Dec 5, 2024",
       status: "completed"
@@ -59,13 +59,13 @@ const SplitBillsSection = () => {
   };
 
   const totalOwed = bills.reduce((sum, bill) => {
-    const userAmount = bill.participants.find(p => p.name === "Alex" && !p.paid)?.amount || 0;
+    const userAmount = bill.participants.find(p => p.name === "Abinesh" && !p.paid)?.amount || 0;
     return sum + userAmount;
   }, 0);
 
   const totalToReceive = bills.reduce((sum, bill) => {
-    if (bill.paidBy === "Alex") {
-      const unpaidAmount = bill.participants.filter(p => !p.paid && p.name !== "Alex").reduce((acc, p) => acc + p.amount, 0);
+    if (bill.paidBy === "Abinesh") {
+      const unpaidAmount = bill.participants.filter(p => !p.paid && p.name !== "Abinesh").reduce((acc, p) => acc + p.amount, 0);
       return sum + unpaidAmount;
     }
     return sum;
@@ -104,14 +104,14 @@ const SplitBillsSection = () => {
         <Card className="p-6 bg-gradient-to-br from-card to-destructive/5">
           <div className="text-center">
             <p className="text-sm text-muted-foreground">You Owe</p>
-            <p className="text-2xl font-bold text-destructive">${totalOwed.toFixed(2)}</p>
+            <p className="text-2xl font-bold text-destructive">₹{totalOwed.toFixed(2)}</p>
           </div>
         </Card>
         
         <Card className="p-6 bg-gradient-to-br from-card to-success/5">
           <div className="text-center">
             <p className="text-sm text-muted-foreground">You're Owed</p>
-            <p className="text-2xl font-bold text-success">${totalToReceive.toFixed(2)}</p>
+            <p className="text-2xl font-bold text-success">₹{totalToReceive.toFixed(2)}</p>
           </div>
         </Card>
         
@@ -119,7 +119,7 @@ const SplitBillsSection = () => {
           <div className="text-center">
             <p className="text-sm text-muted-foreground">Net Balance</p>
             <p className={`text-2xl font-bold ${totalToReceive - totalOwed >= 0 ? 'text-success' : 'text-destructive'}`}>
-              ${Math.abs(totalToReceive - totalOwed).toFixed(2)}
+              ₹{Math.abs(totalToReceive - totalOwed).toFixed(2)}
             </p>
           </div>
         </Card>
@@ -138,7 +138,7 @@ const SplitBillsSection = () => {
                 </p>
               </div>
               <div className="text-right">
-                <p className="text-lg font-bold">${bill.total.toFixed(2)}</p>
+                <p className="text-lg font-bold">₹{bill.total.toFixed(2)}</p>
                 <p className={`text-sm font-medium ${getStatusColor(bill.status)}`}>
                   {bill.status === "completed" ? "Settled" : 
                    bill.status === "partial" ? "Partially Paid" : "Pending"}
@@ -162,9 +162,9 @@ const SplitBillsSection = () => {
                   </div>
                   
                   <div className="flex items-center space-x-2">
-                    <span className="text-sm font-medium">
-                      ${participant.amount.toFixed(2)}
-                    </span>
+                     <span className="text-sm font-medium">
+                       ₹{participant.amount.toFixed(2)}
+                     </span>
                     {participant.paid ? (
                       <Check className="h-4 w-4 text-success" />
                     ) : (

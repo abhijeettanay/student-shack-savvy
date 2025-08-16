@@ -7,7 +7,7 @@ const DashboardOverview = () => {
   const stats = [
     {
       title: "Total Balance",
-      value: "$2,847.50",
+      value: "₹2,847.50",
       change: "+12.5%",
       icon: Wallet,
       trend: "up",
@@ -15,15 +15,15 @@ const DashboardOverview = () => {
     },
     {
       title: "Monthly Budget",
-      value: "$1,200.00",
-      change: "$347 left",
+      value: "₹1,200.00",
+      change: "₹347 left",
       icon: Target,
       trend: "neutral",
       color: "text-info"
     },
     {
       title: "Group Funds",
-      value: "$485.20",
+      value: "₹485.20",
       change: "3 active",
       icon: Users,
       trend: "up",
@@ -31,7 +31,7 @@ const DashboardOverview = () => {
     },
     {
       title: "This Month",
-      value: "$853.30",
+      value: "₹853.30",
       change: "-5.2%",
       icon: DollarSign,
       trend: "down",
@@ -52,7 +52,7 @@ const DashboardOverview = () => {
       {/* Hero Section */}
       <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-primary via-primary/90 to-secondary p-8 text-white">
         <div className="relative z-10">
-          <h1 className="text-3xl font-bold mb-2">Welcome back, Alex! 👋</h1>
+          <h1 className="text-3xl font-bold mb-2">Welcome back, {Math.random() > 0.5 ? 'Abinesh' : 'Abhijeet'}! 👋</h1>
           <p className="text-primary-foreground/80 text-lg">
             You're doing great this month. Here's your financial overview.
           </p>
@@ -99,9 +99,9 @@ const DashboardOverview = () => {
               <div key={index} className="space-y-2">
                 <div className="flex justify-between items-center">
                   <span className="font-medium">{category.name}</span>
-                  <span className={`text-sm ${isOverBudget ? 'text-destructive' : 'text-muted-foreground'}`}>
-                    ${category.spent} / ${category.budget}
-                  </span>
+                   <span className={`text-sm ${isOverBudget ? 'text-destructive' : 'text-muted-foreground'}`}>
+                     ₹{category.spent} / ₹{category.budget}
+                   </span>
                 </div>
                 <Progress 
                   value={Math.min(percentage, 100)} 

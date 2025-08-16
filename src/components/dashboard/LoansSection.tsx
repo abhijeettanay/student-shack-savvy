@@ -11,7 +11,7 @@ const LoansSection = () => {
   const borrowedLoans = [
     {
       id: 1,
-      lender: "Sarah Kim",
+      lender: "Anuva Kim",
       amount: 150.00,
       interestRate: 2.5,
       dueDate: "Jan 15, 2025",
@@ -21,7 +21,7 @@ const LoansSection = () => {
     },
     {
       id: 2,
-      lender: "Mike Chen",
+      lender: "Abhijeet Chen",
       amount: 80.00,
       interestRate: 3.0,
       dueDate: "Dec 20, 2024",
@@ -34,7 +34,7 @@ const LoansSection = () => {
   const lentLoans = [
     {
       id: 3,
-      borrower: "Emma Wilson",
+      borrower: "Akanksha Wilson",
       amount: 200.00,
       interestRate: 2.0,
       dueDate: "Jan 30, 2025",
@@ -44,7 +44,7 @@ const LoansSection = () => {
     },
     {
       id: 4,
-      borrower: "Jake Thompson",
+      borrower: "Abinesh Thompson",
       amount: 120.00,
       interestRate: 2.5,
       dueDate: "Dec 25, 2024",
@@ -97,7 +97,7 @@ const LoansSection = () => {
         <Card className="p-6 bg-gradient-to-br from-card to-destructive/5">
           <div className="text-center">
             <p className="text-sm text-muted-foreground">Total Borrowed</p>
-            <p className="text-2xl font-bold text-destructive">${totalBorrowed.toFixed(2)}</p>
+            <p className="text-2xl font-bold text-destructive">₹{totalBorrowed.toFixed(2)}</p>
             <p className="text-xs text-muted-foreground mt-1">2 active loans</p>
           </div>
         </Card>
@@ -105,7 +105,7 @@ const LoansSection = () => {
         <Card className="p-6 bg-gradient-to-br from-card to-success/5">
           <div className="text-center">
             <p className="text-sm text-muted-foreground">Total Lent</p>
-            <p className="text-2xl font-bold text-success">${totalLent.toFixed(2)}</p>
+            <p className="text-2xl font-bold text-success">₹{totalLent.toFixed(2)}</p>
             <p className="text-xs text-muted-foreground mt-1">2 loans given</p>
           </div>
         </Card>
@@ -113,7 +113,7 @@ const LoansSection = () => {
         <Card className="p-6 bg-gradient-to-br from-card to-accent/5">
           <div className="text-center">
             <p className="text-sm text-muted-foreground">Interest Earned</p>
-            <p className="text-2xl font-bold text-accent">${totalInterestEarned.toFixed(2)}</p>
+            <p className="text-2xl font-bold text-accent">₹{totalInterestEarned.toFixed(2)}</p>
             <p className="text-xs text-muted-foreground mt-1">From completed loans</p>
           </div>
         </Card>
@@ -177,7 +177,7 @@ const LoansSection = () => {
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
                     <div>
                       <p className="text-xs text-muted-foreground">Amount</p>
-                      <p className="font-semibold">${loan.amount.toFixed(2)}</p>
+                       <p className="font-semibold">₹{loan.amount.toFixed(2)}</p>
                     </div>
                     <div>
                       <p className="text-xs text-muted-foreground">Interest Rate</p>
@@ -189,14 +189,14 @@ const LoansSection = () => {
                     </div>
                     <div>
                       <p className="text-xs text-muted-foreground">Remaining</p>
-                      <p className="font-semibold text-destructive">${remaining.toFixed(2)}</p>
+                      <p className="font-semibold text-destructive">₹{remaining.toFixed(2)}</p>
                     </div>
                   </div>
                   
                   {loan.status !== "completed" && (
                     <div className="space-y-2">
                       <div className="flex justify-between text-sm">
-                        <span>Paid: ${loan.amountPaid.toFixed(2)}</span>
+                        <span>Paid: ₹{loan.amountPaid.toFixed(2)}</span>
                         <span>{progress.toFixed(1)}% complete</span>
                       </div>
                       <div className="w-full bg-muted rounded-full h-2">
@@ -251,7 +251,7 @@ const LoansSection = () => {
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
                     <div>
                       <p className="text-xs text-muted-foreground">Amount</p>
-                      <p className="font-semibold">${loan.amount.toFixed(2)}</p>
+                      <p className="font-semibold">₹{loan.amount.toFixed(2)}</p>
                     </div>
                     <div>
                       <p className="text-xs text-muted-foreground">Interest Rate</p>
@@ -263,16 +263,16 @@ const LoansSection = () => {
                     </div>
                     <div>
                       <p className="text-xs text-muted-foreground">Expected Return</p>
-                      <p className="font-semibold text-success">
-                        ${(loan.amount * (1 + loan.interestRate / 100)).toFixed(2)}
-                      </p>
+                       <p className="font-semibold text-success">
+                         ₹{(loan.amount * (1 + loan.interestRate / 100)).toFixed(2)}
+                       </p>
                     </div>
                   </div>
                   
                   {loan.status !== "completed" && (
                     <div className="space-y-2">
                       <div className="flex justify-between text-sm">
-                        <span>Received: ${loan.amountPaid.toFixed(2)}</span>
+                        <span>Received: ₹{loan.amountPaid.toFixed(2)}</span>
                         <span>{progress.toFixed(1)}% repaid</span>
                       </div>
                       <div className="w-full bg-muted rounded-full h-2">

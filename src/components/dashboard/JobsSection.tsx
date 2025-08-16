@@ -11,7 +11,7 @@ const JobsSection = () => {
       company: "University Admissions",
       location: "On Campus",
       type: "Part-time",
-      pay: "$15/hour",
+      pay: "₹15/hour",
       rating: 4.8,
       description: "Lead prospective students and families on campus tours. Flexible scheduling around classes.",
       requirements: ["Current student", "Good communication", "Knowledge of campus"],
@@ -24,7 +24,7 @@ const JobsSection = () => {
       company: "Study Buddy Co.",
       location: "Remote/Campus",
       type: "Freelance",
-      pay: "$20-25/hour",
+      pay: "₹20-25/hour",
       rating: 4.9,
       description: "Help fellow students with calculus and algebra. Set your own schedule.",
       requirements: ["Math major/minor", "3.5+ GPA", "Patient teaching style"],
@@ -37,7 +37,7 @@ const JobsSection = () => {
       company: "Campus Grounds",
       location: "2 blocks away",
       type: "Part-time",
-      pay: "$12/hour + tips",
+      pay: "₹12/hour + tips",
       rating: 4.2,
       description: "Make coffee and serve customers. Student-friendly shifts available.",
       requirements: ["Customer service", "Morning availability", "Food handling cert"],
@@ -50,7 +50,7 @@ const JobsSection = () => {
       company: "Local Marketing Agency",
       location: "Remote",
       type: "Freelance",
-      pay: "$18/hour",
+      pay: "₹18/hour",
       rating: 4.6,
       description: "Create content and manage social media accounts for small businesses.",
       requirements: ["Social media skills", "Creative writing", "Basic design knowledge"],
@@ -63,7 +63,7 @@ const JobsSection = () => {
       company: "University Library",
       location: "On Campus",
       type: "Work-Study",
-      pay: "$13/hour",
+      pay: "₹13/hour",
       rating: 4.7,
       description: "Help students find resources, organize books, and maintain quiet study areas.",
       requirements: ["Work-study eligible", "Attention to detail", "Quiet work environment"],
@@ -76,7 +76,7 @@ const JobsSection = () => {
       company: "QuickEats",
       location: "Campus Area",
       type: "Flexible",
-      pay: "$16/hour + tips",
+      pay: "₹16/hour + tips",
       rating: 4.1,
       description: "Deliver food orders using your bike or car. Work when you want.",
       requirements: ["Own transportation", "Valid license", "Smartphone"],
@@ -121,10 +121,10 @@ const JobsSection = () => {
           <p className="text-2xl font-bold text-primary">{jobs.length}</p>
           <p className="text-sm text-muted-foreground">Available Jobs</p>
         </Card>
-        <Card className="p-4 text-center bg-gradient-to-br from-card to-secondary/5">
-          <p className="text-2xl font-bold text-secondary">$12-25</p>
-          <p className="text-sm text-muted-foreground">Hourly Range</p>
-        </Card>
+         <Card className="p-4 text-center bg-gradient-to-br from-card to-secondary/5">
+           <p className="text-2xl font-bold text-secondary">₹12-25</p>
+           <p className="text-sm text-muted-foreground">Hourly Range</p>
+         </Card>
         <Card className="p-4 text-center bg-gradient-to-br from-card to-accent/5">
           <p className="text-2xl font-bold text-accent">3</p>
           <p className="text-sm text-muted-foreground">On Campus</p>

@@ -12,12 +12,12 @@ const GroupFundsSection = () => {
       name: "Sarah's Birthday Party",
       target: 500,
       raised: 320,
-      members: [
-        { name: "Alex", amount: 80, avatar: "/placeholder.svg" },
-        { name: "Mike", amount: 60, avatar: "/placeholder.svg" },
-        { name: "Emma", amount: 100, avatar: "/placeholder.svg" },
-        { name: "Jake", amount: 80, avatar: "/placeholder.svg" }
-      ],
+       members: [
+         { name: "Abinesh", amount: 80, avatar: "/placeholder.svg" },
+         { name: "Abhijeet", amount: 60, avatar: "/placeholder.svg" },
+         { name: "Anuva", amount: 100, avatar: "/placeholder.svg" },
+         { name: "Akanksha", amount: 80, avatar: "/placeholder.svg" }
+       ],
       deadline: "Dec 15, 2024",
       creator: "You"
     },
@@ -26,27 +26,27 @@ const GroupFundsSection = () => {
       name: "Weekend Trip Fund",
       target: 800,
       raised: 600,
-      members: [
-        { name: "Alex", amount: 150, avatar: "/placeholder.svg" },
-        { name: "Lisa", amount: 200, avatar: "/placeholder.svg" },
-        { name: "Tom", amount: 100, avatar: "/placeholder.svg" },
-        { name: "Anna", amount: 150, avatar: "/placeholder.svg" }
-      ],
+       members: [
+         { name: "Abinesh", amount: 150, avatar: "/placeholder.svg" },
+         { name: "Anuva", amount: 200, avatar: "/placeholder.svg" },
+         { name: "Abhijeet", amount: 100, avatar: "/placeholder.svg" },
+         { name: "Akanksha", amount: 150, avatar: "/placeholder.svg" }
+       ],
       deadline: "Jan 20, 2025",
-      creator: "Lisa"
+      creator: "Anuva"
     },
     {
       id: 3,
       name: "Study Group Snacks",
       target: 100,
       raised: 85,
-      members: [
-        { name: "Alex", amount: 25, avatar: "/placeholder.svg" },
-        { name: "Ben", amount: 30, avatar: "/placeholder.svg" },
-        { name: "Kate", amount: 30, avatar: "/placeholder.svg" }
-      ],
+       members: [
+         { name: "Abinesh", amount: 25, avatar: "/placeholder.svg" },
+         { name: "Abhijeet", amount: 30, avatar: "/placeholder.svg" },
+         { name: "Akanksha", amount: 30, avatar: "/placeholder.svg" }
+       ],
       deadline: "Dec 30, 2024",
-      creator: "Ben"
+      creator: "Abhijeet"
     }
   ]);
 
@@ -75,19 +75,19 @@ const GroupFundsSection = () => {
                 </div>
                 <div className="text-right">
                   <p className="text-sm text-muted-foreground">Target</p>
-                  <p className="font-bold text-primary">${group.target}</p>
+                  <p className="font-bold text-primary">₹{group.target}</p>
                 </div>
               </div>
 
               {/* Progress */}
               <div className="mb-4">
                 <div className="flex justify-between items-center mb-2">
-                  <span className="text-sm font-medium">
-                    ${group.raised} raised ({percentage.toFixed(1)}%)
-                  </span>
-                  <span className="text-sm text-muted-foreground">
-                    ${group.target - group.raised} to go
-                  </span>
+                   <span className="text-sm font-medium">
+                     ₹{group.raised} raised ({percentage.toFixed(1)}%)
+                   </span>
+                   <span className="text-sm text-muted-foreground">
+                     ₹{group.target - group.raised} to go
+                   </span>
                 </div>
                 <Progress 
                   value={percentage} 
@@ -120,9 +120,9 @@ const GroupFundsSection = () => {
                         </Avatar>
                         <span className="text-sm">{member.name}</span>
                       </div>
-                      <span className="text-sm font-medium text-success">
-                        +${member.amount}
-                      </span>
+                       <span className="text-sm font-medium text-success">
+                         +₹{member.amount}
+                       </span>
                     </div>
                   ))}
                 </div>
@@ -152,7 +152,7 @@ const GroupFundsSection = () => {
         <Card className="p-6 text-center bg-gradient-to-br from-card to-secondary/5">
           <Target className="h-8 w-8 mx-auto mb-2 text-secondary" />
           <p className="text-sm text-muted-foreground">Total Contributed</p>
-          <p className="text-2xl font-bold text-secondary">$1,005</p>
+          <p className="text-2xl font-bold text-secondary">₹1,005</p>
         </Card>
         
         <Card className="p-6 text-center bg-gradient-to-br from-card to-primary/5">

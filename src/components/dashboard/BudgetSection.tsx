@@ -82,21 +82,21 @@ const BudgetSection = () => {
           <div className="text-center">
             <PieChart className="h-8 w-8 mx-auto mb-2 text-success" />
             <p className="text-sm text-muted-foreground">Total Allocated</p>
-            <p className="text-2xl font-bold text-success">${totalAllocated}</p>
+            <p className="text-2xl font-bold text-success">₹{totalAllocated}</p>
           </div>
         </Card>
         
         <Card className="p-6 bg-gradient-to-br from-card to-warning/5">
           <div className="text-center">
             <p className="text-sm text-muted-foreground">Total Spent</p>
-            <p className="text-2xl font-bold text-warning">${totalSpent}</p>
+            <p className="text-2xl font-bold text-warning">₹{totalSpent}</p>
           </div>
         </Card>
         
         <Card className="p-6 bg-gradient-to-br from-card to-info/5">
           <div className="text-center">
             <p className="text-sm text-muted-foreground">Remaining</p>
-            <p className="text-2xl font-bold text-info">${totalAllocated - totalSpent}</p>
+            <p className="text-2xl font-bold text-info">₹{totalAllocated - totalSpent}</p>
           </div>
         </Card>
       </div>
@@ -113,8 +113,8 @@ const BudgetSection = () => {
                 <div>
                   <h3 className="font-semibold text-lg">{budget.category}</h3>
                   <p className="text-sm text-muted-foreground">
-                    ${budget.spent} of ${budget.allocated} spent
-                  </p>
+                     ₹{budget.spent} of ₹{budget.allocated} spent
+                   </p>
                 </div>
                 <div className="flex space-x-2">
                   <Button variant="ghost" size="icon">
@@ -129,9 +129,9 @@ const BudgetSection = () => {
               <div className="space-y-2">
                 <div className="flex justify-between text-sm">
                   <span>{percentage.toFixed(1)}% used</span>
-                  <span className={isOverBudget ? "text-destructive" : "text-success"}>
-                    ${budget.allocated - budget.spent} left
-                  </span>
+                   <span className={isOverBudget ? "text-destructive" : "text-success"}>
+                     ₹{budget.allocated - budget.spent} left
+                   </span>
                 </div>
                 <div className="w-full bg-muted rounded-full h-3">
                   <div
