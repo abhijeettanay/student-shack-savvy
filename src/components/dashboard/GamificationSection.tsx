@@ -17,7 +17,7 @@ const GamificationSection = () => {
   const leaderboard = [
     {
       id: 1,
-      name: "Anuva Sharma",
+      name: "Anuva ",
       points: 1580,
       streak: 22,
       rank: 1,
@@ -26,7 +26,7 @@ const GamificationSection = () => {
     },
     {
       id: 2,
-      name: "Abhijeet Singh",
+      name: "Abhijeet ",
       points: 1420,
       streak: 18,
       rank: 2,
@@ -44,7 +44,7 @@ const GamificationSection = () => {
     },
     {
       id: 4,
-      name: "Akanksha Patel",
+      name: "Akanksha ",
       points: 980,
       streak: 12,
       rank: 4,
@@ -53,7 +53,7 @@ const GamificationSection = () => {
     },
     {
       id: 5,
-      name: "Abinesh Kumar",
+      name: "Abinesh ",
       points: 850,
       streak: 8,
       rank: 5,
