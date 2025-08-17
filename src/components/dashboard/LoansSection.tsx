@@ -11,7 +11,7 @@ const LoansSection = () => {
   const borrowedLoans = [
     {
       id: 1,
-      lender: "Anuva Kim",
+      lender: "Anuva ",
       amount: 150.00,
       interestRate: 2.5,
       dueDate: "Jan 15, 2025",
@@ -21,7 +21,7 @@ const LoansSection = () => {
     },
     {
       id: 2,
-      lender: "Abhijeet Chen",
+      lender: "Abhijeet Sum Ting Wong",
       amount: 80.00,
       interestRate: 3.0,
       dueDate: "Dec 20, 2024",
@@ -34,7 +34,7 @@ const LoansSection = () => {
   const lentLoans = [
     {
       id: 3,
-      borrower: "Akanksha Wilson",
+      borrower: "Akanksha ",
       amount: 200.00,
       interestRate: 2.0,
       dueDate: "Jan 30, 2025",
@@ -44,7 +44,7 @@ const LoansSection = () => {
     },
     {
       id: 4,
-      borrower: "Abinesh Thompson",
+      borrower: "Abinesh Ching Chong Wu",
       amount: 120.00,
       interestRate: 2.5,
       dueDate: "Dec 25, 2024",
