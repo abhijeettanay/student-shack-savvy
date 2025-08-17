@@ -37,13 +37,13 @@ const GroupFundsSection = () => {
     },
     {
       id: 3,
-      name: "Study Group Snacks",
-      target: 100,
-      raised: 85,
+      name: "Labubu Toys",
+      target: 1000000000,
+      raised: 103230253,
        members: [
-         { name: "Abinesh", amount: 25, avatar: "/placeholder.svg" },
-         { name: "Abhijeet", amount: 30, avatar: "/placeholder.svg" },
-         { name: "Akanksha", amount: 30, avatar: "/placeholder.svg" }
+         { name: "Abinesh", amount: 30000023, avatar: "/placeholder.svg" },
+         { name: "Abhijeet", amount: 43000000, avatar: "/placeholder.svg" },
+         { name: "Akanksha", amount: 30230230, avatar: "/placeholder.svg" }
        ],
       deadline: "Dec 30, 2024",
       creator: "Abhijeet"
