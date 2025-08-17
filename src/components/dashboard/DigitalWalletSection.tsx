@@ -7,11 +7,17 @@ import { Badge } from "@/components/ui/badge";
 import { Wallet, Plus, Minus, CreditCard, Smartphone, Building, TrendingUp, Eye, EyeOff } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useAuth } from "@/contexts/AuthContext";
+import { supabase } from "@/lib/supabase";
+import { toast } from "@/hooks/use-toast";
 
 const DigitalWalletSection = () => {
+  const { user } = useAuth();
   const [showBalance, setShowBalance] = useState(true);
   const [addAmount, setAddAmount] = useState("");
   const [withdrawAmount, setWithdrawAmount] = useState("");
+  const [balance, setBalance] = useState(12580.50);
+  const [loading, setLoading] = useState(false);
   
   const walletBalance = 2847.50;
   const monthlyLimit = 10000;
