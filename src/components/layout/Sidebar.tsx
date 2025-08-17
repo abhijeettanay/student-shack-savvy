@@ -8,6 +8,8 @@ import {
   Split, 
   CreditCard,
   Brain,
+  Trophy,
+  Gift,
   ChevronRight
 } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -28,6 +30,8 @@ const Sidebar = ({ activeSection, onSectionChange }: SidebarProps) => {
     { id: "investments", label: "Investments", icon: TrendingUp },
     { id: "jobs", label: "Part-time Jobs", icon: Briefcase },
     { id: "loans", label: "Peer Loans", icon: CreditCard },
+    { id: "gamification", label: "Streaks & Points", icon: Trophy },
+    { id: "offers", label: "Student Offers", icon: Gift },
     { id: "ai-insights", label: "AI Insights", icon: Brain },
   ];
 

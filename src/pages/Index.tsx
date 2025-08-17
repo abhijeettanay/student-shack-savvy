@@ -8,6 +8,8 @@ import SplitBillsSection from "@/components/dashboard/SplitBillsSection";
 import InvestmentsSection from "@/components/dashboard/InvestmentsSection";
 import JobsSection from "@/components/dashboard/JobsSection";
 import LoansSection from "@/components/dashboard/LoansSection";
+import GamificationSection from "@/components/dashboard/GamificationSection";
+import OffersSection from "@/components/dashboard/OffersSection";
 import AIInsightsSection from "@/components/dashboard/AIInsightsSection";
 
 const Index = () => {
@@ -29,6 +31,10 @@ const Index = () => {
         return <JobsSection />;
       case "loans":
         return <LoansSection />;
+      case "gamification":
+        return <GamificationSection />;
+      case "offers":
+        return <OffersSection />;
       case "ai-insights":
         return <AIInsightsSection />;
       default:
